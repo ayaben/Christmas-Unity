@@ -20,9 +20,7 @@ public class ListesMaisons : MonoBehaviour
         afficheListe = "";
         for (int i = 0; i < transform.childCount; i++)
         {
-            print(i);
             afficheListe = afficheListe + "- " + transform.GetChild(i).name;
         }
-        print(afficheListe);
     }
 } 

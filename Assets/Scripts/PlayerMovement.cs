@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(0,0, vitesse);
+        
         if(Input.GetKey(KeyCode.LeftArrow))
         {
         	transform.Translate(-vitesse,0,0);
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         	transform.Translate(vitesse,0,0);
         }
 
-        transform.Translate(0,0, vitesse);
+        
         if(Input.GetKey(KeyCode.DownArrow))
         {
         	transform.Translate(0, -vitesse,0);
