@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gestionCollision : MonoBehaviour
+public class GestionCollision : MonoBehaviour
 {
     //public int points = 0;
     public int surchargeHotteJeu = 1;
@@ -68,6 +68,33 @@ public class gestionCollision : MonoBehaviour
             Debug.Log("Poubelle");
             Inventory.instance.VideHotte();
             //bruit poubelle
+        }
+
+        if (collision.gameObject.CompareTag("Maison"))
+        {
+            Debug.Log("Maison");
+
+            ListesMaisons listemaison = collision.transform.GetComponent<ListesMaisons>();
+            if (listemaison.VoeuJeu > 0 && Inventory.instance.jeuCount > 0)
+            {
+                listemaison.VoeuJeu = listemaison.VoeuJeu - 1;
+                listemaison.Updatetext();
+                Inventory.instance.VideJeu(1);
+            }
+
+            if (listemaison.VoeuPeluche > 0 && Inventory.instance.pelucheCount > 0)
+            {
+                listemaison.VoeuPeluche = listemaison.VoeuPeluche - 1;
+                listemaison.Updatetext();
+                Inventory.instance.VidePeluche(1);
+            }
+
+            if (listemaison.VoeuLivre > 0 && Inventory.instance.livreCount > 0)
+            {
+                listemaison.VoeuLivre = listemaison.VoeuLivre - 1;
+                listemaison.Updatetext();
+                Inventory.instance.VideLivre(1);
+            }
         }
     }
 }
