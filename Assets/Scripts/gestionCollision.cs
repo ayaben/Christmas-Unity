@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class gestionCollision : MonoBehaviour
 {
-    int points = 0;
+    //public int points = 0;
     public int surchargeHotteJeu = 1;
     public int surchargeHottePeluche = 1;
     public int surchargeHotteLivre = 1;
     public int surchargeHotteTotale = 3;
+    //public fichier bruitage à glisser déposer dans l'éditeur
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class gestionCollision : MonoBehaviour
         if (objetARamasser)
         {
             handlecollisionobjet(objetARamasser);
+            //GetComponent<AudioSource>().Play();
         }
     }
 
@@ -65,6 +67,7 @@ public class gestionCollision : MonoBehaviour
         {
             Debug.Log("Poubelle");
             Inventory.instance.VideHotte();
+            //bruit poubelle
         }
     }
 }
