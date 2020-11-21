@@ -57,6 +57,13 @@ public class GestionCollision : MonoBehaviour
             objetARamasser.Usine.nombreObjetUsine--;
         }
 
+        if(objetARamasser.Type == TypeObjet.SUCREDORGE)
+        {
+            print("Youpi, un sucre d'orge");
+            Destroy(objetARamasser.gameObject);
+            PlayerMovement playermovement = this.GetComponent<PlayerMovement>();
+            playermovement.Acceleration();
+        }
 
     }
 
