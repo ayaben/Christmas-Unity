@@ -74,6 +74,7 @@ public class GestionCollision : MonoBehaviour
         {
             Debug.Log("Poubelle");
             Inventory.instance.VideHotte();
+            ControlePoints.instance.SupprimePoint(1);
             //bruit poubelle
         }
 
@@ -87,6 +88,7 @@ public class GestionCollision : MonoBehaviour
                 listemaison.VoeuJeu = listemaison.VoeuJeu - 1;
                 listemaison.Updatetext();
                 Inventory.instance.VideJeu(1);
+                ControlePoints.instance.AjoutPoint(1);
             }
 
             if (listemaison.VoeuPeluche > 0 && Inventory.instance.pelucheCount > 0)
@@ -94,6 +96,7 @@ public class GestionCollision : MonoBehaviour
                 listemaison.VoeuPeluche = listemaison.VoeuPeluche - 1;
                 listemaison.Updatetext();
                 Inventory.instance.VidePeluche(1);
+                ControlePoints.instance.AjoutPoint(1);
             }
 
             if (listemaison.VoeuLivre > 0 && Inventory.instance.livreCount > 0)
@@ -101,6 +104,7 @@ public class GestionCollision : MonoBehaviour
                 listemaison.VoeuLivre = listemaison.VoeuLivre - 1;
                 listemaison.Updatetext();
                 Inventory.instance.VideLivre(1);
+                ControlePoints.instance.AjoutPoint(1);
             }
         }
     }
