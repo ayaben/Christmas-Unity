@@ -30,12 +30,6 @@ public class Inventory : MonoBehaviour
 		instance = this;
 	}
 
-	public void AddCoins(int count)
-	{
-		coinsCount += count;
-		coinsCountText.text = coinsCount.ToString();
-	}
-
 	public void AddJeu(int count)
 	{
 		objetCount += count;
