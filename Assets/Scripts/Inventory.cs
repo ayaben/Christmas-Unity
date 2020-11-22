@@ -30,19 +30,18 @@ public class Inventory : MonoBehaviour
 		instance = this;
 	}
 
+	public void AddCoins(int count)
+	{
+		coinsCount += count;
+		coinsCountText.text = coinsCount.ToString();
+	}
+
 	public void AddJeu(int count)
 	{
 		objetCount += count;
 		jeuCount += count;
 		jeuCountText.text = jeuCount.ToString();
 	}
-
-	public void VideJeu(int count)
-    {
-		objetCount = objetCount - count;
-		jeuCount = jeuCount - count;
-		jeuCountText.text = jeuCount.ToString();
-    }
 
 	public void AddPeluche(int count)
 	{
@@ -51,28 +50,14 @@ public class Inventory : MonoBehaviour
 		pelucheCountText.text = pelucheCount.ToString();
 	}
 
-	public void VidePeluche(int count)
-	{
-		objetCount = objetCount - count;
-		pelucheCount = pelucheCount - count;
-		pelucheCountText.text = pelucheCount.ToString();
-	}
-
 	public void AddLivre(int count)
 	{
-		objetCount += count;
+	objetCount += count;
 		livreCount += count;
 		livreCountText.text = livreCount.ToString();
 	}
 
-	public void VideLivre(int count)
-	{
-		objetCount = objetCount - count;
-		livreCount = livreCount - count;
-		livreCountText.text = livreCount.ToString();
-	}
-
-	public void VideHotte()
+		public void VideHotte()
 	{
 		objetCount = 0;
 		jeuCount = 0;

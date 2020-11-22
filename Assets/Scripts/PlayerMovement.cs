@@ -5,10 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	public float vitesse;
-    public float vitesseInitiale;
-    public float vitesseMax;
-    public float dureeAcceleration = 5f;
-    float tempsAcceleration = 0;
 
 	void Start ()
 	{
@@ -17,8 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        tempsAcceleration += Time.deltaTime;
-
+        
         if(Input.GetKey(KeyCode.LeftArrow))
         {
         	transform.Translate(-vitesse,0,0);
@@ -39,24 +34,5 @@ public class PlayerMovement : MonoBehaviour
         {
         	transform.Translate(0, vitesse,0);
         }
-
-        if(vitesse == vitesseMax)
-        {
-            UpdateVitesse();
-        }
    }
-
-    public void Acceleration()
-    {
-        vitesse = vitesseMax;
-        tempsAcceleration = 0;
-    }
-
-    void UpdateVitesse()
-    {
-        if (tempsAcceleration >= dureeAcceleration)
-        {
-            vitesse = vitesseInitiale;
-        }
-    }
 }
