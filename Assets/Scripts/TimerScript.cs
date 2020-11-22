@@ -21,8 +21,14 @@ public class TimerScript : MonoBehaviour
     {
             float tempsRestant = startTimer - Time.time;
             print((tempsRestant / 60).ToString());
-        TexteTimer.text = "Temps restant  :  " + ((int)(tempsRestant / 60)).ToString()
+            TexteTimer.text = "Temps restant  :  " + ((int)(tempsRestant / 60)).ToString()
             + ":" + ((int)(tempsRestant - ((int)(tempsRestant / 60)) * 60)).ToString();
+
+            if(tempsRestant <= 0f){
+                SceneManager.LoadScene("GameOver");
+            }
+
+
     }
 
 }

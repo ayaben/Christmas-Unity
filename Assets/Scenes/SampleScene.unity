@@ -320,16 +320,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListedeVoeux: {fileID: 1667190982}
   mapetiteListe:
-  - 
-  - 
-  - 
-  - 
-  - 
-  VoeuLivre: 0
-  VoeuJeu: 0
-  VoeuPeluche: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &71791468
 Rigidbody2D:
   serializedVersion: 4
@@ -520,16 +516,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListedeVoeux: {fileID: 60682482}
   mapetiteListe:
-  - 
-  - 
-  - 
-  - 
-  - 
-  VoeuLivre: 0
-  VoeuJeu: 0
-  VoeuPeluche: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &180204098
 Rigidbody2D:
   serializedVersion: 4
@@ -21409,16 +21401,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListedeVoeux: {fileID: 831346348}
   mapetiteListe:
-  - 
-  - 
-  - 
-  - 
-  - 
-  VoeuLivre: 0
-  VoeuJeu: 0
-  VoeuPeluche: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1106283402
 GameObject:
   m_ObjectHideFlags: 0
@@ -24446,9 +24434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vitesse: 0.2
-  vitesseInitiale: 0.2
-  vitesseMax: 0.4
-  dureeAcceleration: 5
 --- !u!212 &1745536714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28524,16 +28509,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListedeVoeux: {fileID: 2086873006}
   mapetiteListe:
-  - 
-  - 
-  - 
-  - 
-  - 
-  VoeuLivre: 0
-  VoeuJeu: 0
-  VoeuPeluche: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &1944569651
 Rigidbody2D:
   serializedVersion: 4
@@ -29001,16 +28982,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListedeVoeux: {fileID: 991805516}
   mapetiteListe:
-  - 
-  - 
-  - 
-  - 
-  - 
-  VoeuLivre: 0
-  VoeuJeu: 0
-  VoeuPeluche: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &2122862062
 Rigidbody2D:
   serializedVersion: 4

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: "sapin de\u0301core\u0301 jour_6"
+  m_Name: "sapin d\xE9cor\xE9 jour_6"
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 6896523364182699944, guid: db4fa40e0c04c4279bfc458c6719fe14,
     type: 3}
