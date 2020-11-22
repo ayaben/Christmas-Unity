@@ -8,10 +8,9 @@ public class ObjetARamasser : MonoBehaviour
 
     [HideInInspector]
     public GenerationCreation Usine;
-    public GenerationSucreDorge GenerationSO;
 }
 
 public enum TypeObjet
 {
-    LIVRE, JEU, PELUCHE, SUCREDORGE
+    LIVRE, JEU, PELUCHE
 }

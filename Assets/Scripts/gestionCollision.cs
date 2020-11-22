@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GestionCollision : MonoBehaviour
+public class gestionCollision : MonoBehaviour
 {
-    //public int points = 0;
+    int points = 0;
     public int surchargeHotteJeu = 1;
     public int surchargeHottePeluche = 1;
     public int surchargeHotteLivre = 1;
     public int surchargeHotteTotale = 3;
-    //public fichier bruitage à glisser déposer dans l'éditeur
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +26,6 @@ public class GestionCollision : MonoBehaviour
         if (objetARamasser)
         {
             handlecollisionobjet(objetARamasser);
-            //GetComponent<AudioSource>().Play();
         }
     }
 
@@ -57,13 +55,6 @@ public class GestionCollision : MonoBehaviour
             objetARamasser.Usine.nombreObjetUsine--;
         }
 
-        if(objetARamasser.Type == TypeObjet.SUCREDORGE)
-        {
-            print("Youpi, un sucre d'orge");
-            Destroy(objetARamasser.gameObject);
-            PlayerMovement playermovement = this.GetComponent<PlayerMovement>();
-            playermovement.Acceleration();
-        }
 
     }
 
@@ -74,38 +65,6 @@ public class GestionCollision : MonoBehaviour
         {
             Debug.Log("Poubelle");
             Inventory.instance.VideHotte();
-            ControlePoints.instance.SupprimePoint(1);
-            //bruit poubelle
-        }
-
-        if (collision.gameObject.CompareTag("Maison"))
-        {
-            Debug.Log("Maison");
-
-            ListesMaisons listemaison = collision.transform.GetComponent<ListesMaisons>();
-            if (listemaison.VoeuJeu > 0 && Inventory.instance.jeuCount > 0)
-            {
-                listemaison.VoeuJeu = listemaison.VoeuJeu - 1;
-                listemaison.Updatetext();
-                Inventory.instance.VideJeu(1);
-                ControlePoints.instance.AjoutPoint(1);
-            }
-
-            if (listemaison.VoeuPeluche > 0 && Inventory.instance.pelucheCount > 0)
-            {
-                listemaison.VoeuPeluche = listemaison.VoeuPeluche - 1;
-                listemaison.Updatetext();
-                Inventory.instance.VidePeluche(1);
-                ControlePoints.instance.AjoutPoint(1);
-            }
-
-            if (listemaison.VoeuLivre > 0 && Inventory.instance.livreCount > 0)
-            {
-                listemaison.VoeuLivre = listemaison.VoeuLivre - 1;
-                listemaison.Updatetext();
-                Inventory.instance.VideLivre(1);
-                ControlePoints.instance.AjoutPoint(1);
-            }
         }
     }
 }
