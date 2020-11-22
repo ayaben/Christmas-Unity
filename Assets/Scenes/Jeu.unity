@@ -316,12 +316,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListedeVoeux: {fileID: 1054487758}
   mapetiteListe:
-  - {fileID: 7044979799893825501, guid: dad61d3c6166f46ba97f0f4eec014a6a, type: 3}
-  - {fileID: 917779305660486742, guid: 5984dd8f0c24d4935aa84f3666b5c3af, type: 3}
-  - {fileID: 1779522417093896082, guid: 292974fe7955e4d5cad354224ef83ba7, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - 
+  - 
+  - 
+  - 
+  - 
+  VoeuLivre: 0
+  VoeuJeu: 0
+  VoeuPeluche: 0
 --- !u!50 &71791468
 Rigidbody2D:
   serializedVersion: 4
@@ -512,12 +516,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListedeVoeux: {fileID: 558484597}
   mapetiteListe:
-  - {fileID: 7044979799893825501, guid: dad61d3c6166f46ba97f0f4eec014a6a, type: 3}
-  - {fileID: 917779305660486742, guid: 5984dd8f0c24d4935aa84f3666b5c3af, type: 3}
-  - {fileID: 1779522417093896082, guid: 292974fe7955e4d5cad354224ef83ba7, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - 
+  - 
+  - 
+  - 
+  - 
+  VoeuLivre: 0
+  VoeuJeu: 0
+  VoeuPeluche: 0
 --- !u!50 &180204098
 Rigidbody2D:
   serializedVersion: 4
@@ -21666,7 +21674,7 @@ GameObject:
   - component: {fileID: 1085763766}
   - component: {fileID: 1085763769}
   m_Layer: 0
-  m_Name: Maison
+  m_Name: Maison (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21745,12 +21753,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListedeVoeux: {fileID: 2071354251}
   mapetiteListe:
-  - {fileID: 7044979799893825501, guid: dad61d3c6166f46ba97f0f4eec014a6a, type: 3}
-  - {fileID: 917779305660486742, guid: 5984dd8f0c24d4935aa84f3666b5c3af, type: 3}
-  - {fileID: 1779522417093896082, guid: 292974fe7955e4d5cad354224ef83ba7, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - 
+  - 
+  - 
+  - 
+  - 
+  VoeuLivre: 0
+  VoeuJeu: 0
+  VoeuPeluche: 0
 --- !u!1 &1106283402
 GameObject:
   m_ObjectHideFlags: 0
@@ -24538,6 +24550,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vitesse: 0.02
+  vitesseInitiale: 0
+  vitesseMax: 0
+  dureeAcceleration: 5
 --- !u!212 &1745536714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24615,10 +24630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f19a188f2fa435a9d6cfa690db469e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surchargeHotteJeu: 1
-  surchargeHottePeluche: 1
-  surchargeHotteLivre: 1
-  surchargeHotteTotale: 3
 --- !u!81 &1745536717
 AudioListener:
   m_ObjectHideFlags: 0
@@ -28593,12 +28604,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListedeVoeux: {fileID: 345734157}
   mapetiteListe:
-  - {fileID: 7044979799893825501, guid: dad61d3c6166f46ba97f0f4eec014a6a, type: 3}
-  - {fileID: 917779305660486742, guid: 5984dd8f0c24d4935aa84f3666b5c3af, type: 3}
-  - {fileID: 1779522417093896082, guid: 292974fe7955e4d5cad354224ef83ba7, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - 
+  - 
+  - 
+  - 
+  - 
+  VoeuLivre: 0
+  VoeuJeu: 0
+  VoeuPeluche: 0
 --- !u!50 &1944569651
 Rigidbody2D:
   serializedVersion: 4
@@ -29390,12 +29405,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c91f3800d6b4537ac9ab550adc85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListedeVoeux: {fileID: 1975868596}
   mapetiteListe:
-  - {fileID: 7044979799893825501, guid: dad61d3c6166f46ba97f0f4eec014a6a, type: 3}
-  - {fileID: 917779305660486742, guid: 5984dd8f0c24d4935aa84f3666b5c3af, type: 3}
-  - {fileID: 1779522417093896082, guid: 292974fe7955e4d5cad354224ef83ba7, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - 
+  - 
+  - 
+  - 
+  - 
+  VoeuLivre: 0
+  VoeuJeu: 0
+  VoeuPeluche: 0
 --- !u!50 &2122862062
 Rigidbody2D:
   serializedVersion: 4

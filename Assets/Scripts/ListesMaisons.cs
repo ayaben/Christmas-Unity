@@ -30,7 +30,6 @@ public class ListesMaisons : MonoBehaviour
         mapetiteListe[1] = "- " + VoeuJeu.ToString() + " jeux" + "\n";
         mapetiteListe[2] = "- " + VoeuPeluche.ToString() + " peluches";
 
-        print(mapetiteListe);
         ListedeVoeux.text = mapetiteListe[0] + mapetiteListe[1] + mapetiteListe[2];
     }
 
