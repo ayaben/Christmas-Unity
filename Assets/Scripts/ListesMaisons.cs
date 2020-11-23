@@ -18,11 +18,16 @@ public class ListesMaisons : MonoBehaviour
 
    public void Start()
     {
-        VoeuLivre = Random.Range(5, 10);
-        VoeuJeu = Random.Range(5, 10);
-        VoeuPeluche = Random.Range(5, 10);
+        VoeuLivre = Random.Range(1, 2);
+        VoeuJeu = Random.Range(1, 2);
+        VoeuPeluche = Random.Range(1, 2);
         Updatetext();
+        ControlePoints.instance.AjoutPointaAtteindre(VoeuJeu+VoeuLivre+VoeuPeluche);
+
+
+
     }
+
 
     public void Updatetext()
     {
