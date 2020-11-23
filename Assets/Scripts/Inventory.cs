@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-	public int coinsCount;
-	public Text coinsCountText;
-
 	public int jeuCount;
 	public Text jeuCountText;
 
