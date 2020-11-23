@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 71791467}
   m_Layer: 0
   m_Name: Maison (3)
-  m_TagString: Untagged
+  m_TagString: Maison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 180204097}
   m_Layer: 0
   m_Name: Maison (2)
-  m_TagString: Untagged
+  m_TagString: Maison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21600,7 +21600,7 @@ GameObject:
   - component: {fileID: 1085763769}
   m_Layer: 0
   m_Name: Maison (5)
-  m_TagString: Untagged
+  m_TagString: Maison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24489,9 +24489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb2679c6b36647c0ac60659a82601fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesse: 0.02
-  vitesseInitiale: 0
-  vitesseMax: 0
+  vitesse: 0.1
+  vitesseInitiale: 0.1
+  vitesseMax: 0.4
   dureeAcceleration: 5
 --- !u!212 &1745536714
 SpriteRenderer:
@@ -28517,7 +28517,7 @@ GameObject:
   - component: {fileID: 1944569650}
   m_Layer: 0
   m_Name: Maison (4)
-  m_TagString: Untagged
+  m_TagString: Maison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29318,7 +29318,7 @@ GameObject:
   - component: {fileID: 2122862061}
   m_Layer: 0
   m_Name: Maison (1)
-  m_TagString: Untagged
+  m_TagString: Maison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
