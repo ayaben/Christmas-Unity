@@ -37,8 +37,8 @@ public class GenerationSucreDorge : MonoBehaviour
         objetARamasser.GenerationSO = this; // lie l'objet à l'usine qui le crée : l'usine de objet à ramasser = l'usine sur laquelle il y a ce script
         Vector3 positionGenerationSO = this.gameObject.transform.position;
 
-        float posX = Random.Range(-2, 2); // variation par rapport à la position de l'usine
-        float posY = Random.Range(-2, 2); // variation par rapport à la position de l'usine
+        float posX = Random.Range(-12, 19); // variation par rapport à la position de l'usine
+        float posY = Random.Range(-13, 17); // variation par rapport à la position de l'usine
         nouveauObjet.position = positionGenerationSO + new Vector3(posX, posY, -0.01f);
     }
 
