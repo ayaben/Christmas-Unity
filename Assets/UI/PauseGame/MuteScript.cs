@@ -40,7 +40,7 @@ public class MuteScript : MonoBehaviour
     {
         foreach(AudioSource tousSons in sources)
         {
-            tousSons.volume = sons ? 0 : 1 ;
+            tousSons.volume = sons ? 0 : 0.08f ;
         }
     }
 
