@@ -9,7 +9,7 @@ public class GestionCollision : MonoBehaviour
     public int surchargeHottePeluche = 1;
     public int surchargeHotteLivre = 1;
     public int surchargeHotteTotale = 3;
-    //public fichier bruitage à glisser déposer dans l'éditeur
+    //public fichiers bruitage à glisser déposer dans l'éditeur
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +38,7 @@ public class GestionCollision : MonoBehaviour
             Destroy(objetARamasser.gameObject);
             Inventory.instance.AddPeluche(1);
             objetARamasser.Usine.nombreObjetUsine--;
+            //bruit objet à ramasser
         }
 
         if (objetARamasser.Type == TypeObjet.LIVRE && Inventory.instance.objetCount < surchargeHotteTotale)
@@ -46,6 +47,7 @@ public class GestionCollision : MonoBehaviour
             Destroy(objetARamasser.gameObject);
             Inventory.instance.AddLivre(1);
             objetARamasser.Usine.nombreObjetUsine--;
+            //bruit objet à ramasser
         }
 
 
@@ -55,6 +57,7 @@ public class GestionCollision : MonoBehaviour
             Destroy(objetARamasser.gameObject);
             Inventory.instance.AddJeu(1);
             objetARamasser.Usine.nombreObjetUsine--;
+            //bruit obet à ramasser
         }
 
         if(objetARamasser.Type == TypeObjet.SUCREDORGE)
@@ -63,6 +66,7 @@ public class GestionCollision : MonoBehaviour
             Destroy(objetARamasser.gameObject);
             PlayerMovement playermovement = this.GetComponent<PlayerMovement>();
             playermovement.Acceleration();
+            //bruit slurp sucre d'orge
         }
 
     }
