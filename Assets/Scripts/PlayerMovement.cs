@@ -9,42 +9,47 @@ public class PlayerMovement : MonoBehaviour
     public float vitesseMax;
     public float dureeAcceleration = 5f;
     float tempsAcceleration = 0;
+    public PauseScript monScriptPause;
 
-	void Start ()
+    void Start ()
 	{
 
 	}
 
     void Update()
     {
-        tempsAcceleration += Time.deltaTime;
-
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if (!monScriptPause.Paused) // Si le bouton pause est enfoncé, le player ne bouge pas
         {
-        	transform.Translate(-vitesse,0,0);
-        }
+            tempsAcceleration += Time.deltaTime;
 
-        if(Input.GetKey(KeyCode.RightArrow))
-        {
-        	transform.Translate(vitesse,0,0);
-        }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Translate(-vitesse, 0, 0);
+            }
 
-        
-        if(Input.GetKey(KeyCode.DownArrow))
-        {
-        	transform.Translate(0, -vitesse,0);
-        }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Translate(vitesse, 0, 0);
+            }
 
-        if(Input.GetKey(KeyCode.UpArrow))
-        {
-        	transform.Translate(0, vitesse,0);
-        }
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.Translate(0, -vitesse, 0);
+            }
 
-        if(vitesse == vitesseMax)
-        {
-            UpdateVitesse();
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                transform.Translate(0, vitesse, 0);
+            }
+
+            if (vitesse == vitesseMax)
+            {
+                UpdateVitesse();
+            }
         }
-   }
+    }
+
+
 
     public void Acceleration()
     {
