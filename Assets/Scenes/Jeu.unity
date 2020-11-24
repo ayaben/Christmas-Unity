@@ -24495,7 +24495,6 @@ GameObject:
   - component: {fileID: 1745536713}
   - component: {fileID: 1745536716}
   - component: {fileID: 1745536718}
-  - component: {fileID: 1745536717}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -24648,14 +24647,6 @@ MonoBehaviour:
   surchargeHottePeluche: 1
   surchargeHotteLivre: 1
   surchargeHotteTotale: 3
---- !u!81 &1745536717
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745536710}
-  m_Enabled: 1
 --- !u!82 &1745536718
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29078,7 +29069,6 @@ GameObject:
   - component: {fileID: 2110496272}
   - component: {fileID: 2110496271}
   - component: {fileID: 2110496270}
-  - component: {fileID: 2110496278}
   - component: {fileID: 2110496277}
   - component: {fileID: 2110496276}
   - component: {fileID: 2110496275}
@@ -29317,7 +29307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110496269}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -29353,18 +29343,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2110496278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110496269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfd336580fe96c43b4fc3418874deed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2110496279
 MonoBehaviour:
   m_ObjectHideFlags: 0
