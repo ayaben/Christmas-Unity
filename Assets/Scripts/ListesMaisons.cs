@@ -36,6 +36,32 @@ public class ListesMaisons : MonoBehaviour
         mapetiteListe[2] = "- " + VoeuPeluche.ToString() + " peluches";
 
         ListedeVoeux.text = mapetiteListe[0] + mapetiteListe[1] + mapetiteListe[2];
+
+        if (VoeuLivre<=1)
+        {
+            mapetiteListe[0]= "- " + VoeuLivre.ToString() + " livre\n";
+
+            ListedeVoeux.text = mapetiteListe[0] + mapetiteListe[1] + mapetiteListe[2];
+        }
+
+        if (VoeuJeu<=1)
+        {
+            mapetiteListe[1] = "- " + VoeuJeu.ToString() + " jeu" + "\n";
+
+            ListedeVoeux.text = mapetiteListe[0] + mapetiteListe[1] + mapetiteListe[2];
+        }
+
+        if (VoeuPeluche<=1)
+        {
+            mapetiteListe[2] = "- " + VoeuPeluche.ToString() + " peluche";
+
+            ListedeVoeux.text = mapetiteListe[0] + mapetiteListe[1] + mapetiteListe[2];
+        }
+
+        if (VoeuLivre==0 && VoeuJeu==0 && VoeuPeluche ==0)
+        {
+            ListedeVoeux.text = "Mission accomplie ici !";
+        }
     }
 
     // Update is called once per frame
