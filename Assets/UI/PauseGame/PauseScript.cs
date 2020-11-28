@@ -13,12 +13,10 @@ public class PauseScript : MonoBehaviour
     public Button BoutonPause;
     public Sprite ImagePause;
     public Sprite ImagePlay;
-    AudioSource[] sources;
 
     void Start()
     {
         BoutonPause.GetComponent<Button>();
-        sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
     }
 
 
@@ -28,7 +26,7 @@ public class PauseScript : MonoBehaviour
         {
             BoutonPause.image.overrideSprite = ImagePause;
             Time.timeScale = 1;
-            Mute(false);
+            AudioListener.volume = 1f;
             Muted = true;
             Paused = false;
         }
@@ -36,18 +34,9 @@ public class PauseScript : MonoBehaviour
         {
             BoutonPause.image.overrideSprite = ImagePlay;
             Time.timeScale = 0;
-            Mute(true);
+            AudioListener.volume = 0f;
             Muted = false;
             Paused = true;
-        }
-    }
-
-
-    void Mute(bool sons)
-    {
-        foreach (AudioSource tousSons in sources)
-        {
-            tousSons.volume = sons ? 0 : 0.08f;
         }
     }
 }

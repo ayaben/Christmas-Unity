@@ -4,41 +4,40 @@ using UnityEngine;
 
 public class GestionCollision : MonoBehaviour
 {
+    public AudioSource Gift, Slurp, Trash, Pop, Surcharge;
     //public int points = 0;
     public int surchargeHotteJeu = 1;
     public int surchargeHottePeluche = 1;
     public int surchargeHotteLivre = 1;
     public int surchargeHotteTotale = 3;
-    //public fichiers bruitage à glisser déposer dans l'éditeur
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         ObjetARamasser objetARamasser = collision.transform.gameObject.GetComponent<ObjetARamasser>();
         if (objetARamasser)
         {
             handlecollisionobjet(objetARamasser);
-            //GetComponent<AudioSource>().Play();
         }
     }
 
-    void handlecollisionobjet(ObjetARamasser objetARamasser) { 
-        if (objetARamasser.Type==TypeObjet.PELUCHE && Inventory.instance.objetCount<surchargeHotteTotale)
+    void handlecollisionobjet(ObjetARamasser objetARamasser) {
+        if (objetARamasser.Type == TypeObjet.PELUCHE && Inventory.instance.objetCount < surchargeHotteTotale)
         {
             print("Chouette, j'ai touché une peluche");
             Destroy(objetARamasser.gameObject);
             Inventory.instance.AddPeluche(1);
             objetARamasser.Usine.nombreObjetUsine--;
-            //bruit objet à ramasser
+            Gift.Play();
         }
 
         if (objetARamasser.Type == TypeObjet.LIVRE && Inventory.instance.objetCount < surchargeHotteTotale)
@@ -47,9 +46,8 @@ public class GestionCollision : MonoBehaviour
             Destroy(objetARamasser.gameObject);
             Inventory.instance.AddLivre(1);
             objetARamasser.Usine.nombreObjetUsine--;
-            //bruit objet à ramasser
+            Gift.Play();
         }
-
 
         if (objetARamasser.Type == TypeObjet.JEU && Inventory.instance.objetCount < surchargeHotteTotale)
         {
@@ -57,7 +55,7 @@ public class GestionCollision : MonoBehaviour
             Destroy(objetARamasser.gameObject);
             Inventory.instance.AddJeu(1);
             objetARamasser.Usine.nombreObjetUsine--;
-            //bruit obet à ramasser
+            Gift.Play();
         }
 
         if(objetARamasser.Type == TypeObjet.SUCREDORGE)
@@ -66,7 +64,7 @@ public class GestionCollision : MonoBehaviour
             Destroy(objetARamasser.gameObject);
             PlayerMovement playermovement = this.GetComponent<PlayerMovement>();
             playermovement.Acceleration();
-            //bruit slurp sucre d'orge
+            Slurp.Play();
         }
 
     }
@@ -79,7 +77,7 @@ public class GestionCollision : MonoBehaviour
             Debug.Log("Poubelle");
             Inventory.instance.VideHotte();
             ControlePoints.instance.SupprimePoint(1);
-            //bruit poubelle
+            Trash.Play();
         }
 
         if (collision.gameObject.CompareTag("Maison"))
@@ -94,7 +92,7 @@ public class GestionCollision : MonoBehaviour
                 Inventory.instance.VideJeu(1);
                 ControlePoints.instance.AjoutPoint(1);
                 ControlePoints.instance.ReduirePointAtteindre(1);
-
+                Pop.Play();
             }
 
             if (listemaison.VoeuPeluche > 0 && Inventory.instance.pelucheCount > 0)
@@ -104,6 +102,7 @@ public class GestionCollision : MonoBehaviour
                 Inventory.instance.VidePeluche(1);
                 ControlePoints.instance.AjoutPoint(1);
                 ControlePoints.instance.ReduirePointAtteindre(1);
+                Pop.Play();
             }
 
             if (listemaison.VoeuLivre > 0 && Inventory.instance.livreCount > 0)
@@ -113,6 +112,7 @@ public class GestionCollision : MonoBehaviour
                 Inventory.instance.VideLivre(1);
                 ControlePoints.instance.AjoutPoint(1);
                 ControlePoints.instance.ReduirePointAtteindre(1);
+                Pop.Play();
             }
         }
     }

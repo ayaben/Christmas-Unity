@@ -8,14 +8,13 @@ public class MuteScript : MonoBehaviour
     public Button BoutonMute;
     public Sprite SoundOFF, SoundON;
     public bool Muted = false;
-
-    AudioSource[] sources;
-
+    private float volumeInitial;
+    AudioListener tousSons;
+    
 
     void Start()
     {
         BoutonMute.GetComponent<Button>();
-        sources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
     }
 
 
@@ -25,22 +24,14 @@ public class MuteScript : MonoBehaviour
         if (Muted)
         {
             BoutonMute.image.overrideSprite = SoundOFF;
-            Mute(true);
+            AudioListener.volume = 0f;
             Muted = false;
         }
         else
         {
             BoutonMute.image.overrideSprite = SoundON;
-            Mute(false);
+            AudioListener.volume = 1f;
             Muted = true;
-        }
-    }
-
-    void Mute (bool sons)
-    {
-        foreach(AudioSource tousSons in sources)
-        {
-            tousSons.volume = sons ? 0 : 0.08f ;
         }
     }
 

@@ -12,6 +12,7 @@ public class ListesMaisons : MonoBehaviour
     public int VoeuLivre;
     public int VoeuJeu;
     public int VoeuPeluche;
+    public AudioSource MaisonLivreeSound;
     //string afficheListe = "";
     //public transform = Livre;
 
@@ -23,8 +24,6 @@ public class ListesMaisons : MonoBehaviour
         VoeuPeluche = Random.Range(1, 2);
         Updatetext();
         ControlePoints.instance.AjoutPointaAtteindre(VoeuJeu+VoeuLivre+VoeuPeluche);
-
-
 
     }
 
@@ -60,7 +59,9 @@ public class ListesMaisons : MonoBehaviour
 
         if (VoeuLivre==0 && VoeuJeu==0 && VoeuPeluche ==0)
         {
+
             ListedeVoeux.text = "Mission accomplie ici !";
+            MaisonLivreeSound.Play();
         }
     }
 

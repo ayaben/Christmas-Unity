@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	public float vitesse;
+    // Gestion de la vitesse du player
+    public float vitesse;
     public float vitesseInitiale;
     public float vitesseMax;
     public float dureeAcceleration = 5f;
     float tempsAcceleration = 0;
+
+    // Gestion de la vitesse de la musique de fond
+    public AudioSource musique;
     public PauseScript monScriptPause;
 
-    void Start ()
-	{
-
-	}
+    void Start()
+    {
+        musique.pitch = 1f;
+    }
 
     void Update()
     {
@@ -46,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 UpdateVitesse();
             }
+
         }
     }
 
@@ -55,6 +60,9 @@ public class PlayerMovement : MonoBehaviour
     {
         vitesse = vitesseMax;
         tempsAcceleration = 0;
+        // Accélération du fond musical 
+        musique.outputAudioMixerGroup.audioMixer.SetFloat("musiquePitch", 1.3f);
+        musique.outputAudioMixerGroup.audioMixer.SetFloat("pitchShifter", 0.7f);
     }
 
     void UpdateVitesse()
@@ -62,6 +70,9 @@ public class PlayerMovement : MonoBehaviour
         if (tempsAcceleration >= dureeAcceleration)
         {
             vitesse = vitesseInitiale;
+            // Reprise du fond musical à vitesse normale
+            musique.outputAudioMixerGroup.audioMixer.SetFloat("musiquePitch", 1f);
+            musique.outputAudioMixerGroup.audioMixer.SetFloat("pitchShifter", 1f);
         }
     }
 }
