@@ -11,9 +11,24 @@ public class UIScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void IntroGame()
+    public void IntroGame1()
     {
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("Intro1");
+    }
+
+    public void IntroGame2()
+    {
+        SceneManager.LoadScene("Intro2");
+    }
+
+    public void IntroGame3()
+    {
+        SceneManager.LoadScene("Intro3");
+    }
+
+    public void IntroGame4()
+    {
+        SceneManager.LoadScene("Intro4");
     }
 
     public void PlayGame()

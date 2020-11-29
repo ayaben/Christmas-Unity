@@ -11,13 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public float dureeAcceleration = 5f;
     float tempsAcceleration = 0;
 
-    // Gestion de la vitesse de la musique de fond
-    public AudioSource musique;
     public PauseScript monScriptPause;
 
     void Start()
     {
-        musique.pitch = 1f;
     }
 
     void Update()
@@ -60,9 +57,6 @@ public class PlayerMovement : MonoBehaviour
     {
         vitesse = vitesseMax; //le joueur accélère, sa vitesse devient sa vitesse max
         tempsAcceleration = 0; //on lui donne la valeur 0 au moment où le joueur commence à accélére. Il est modifié ensuite dans chaque Update
-        // Accélération du fond musical 
-        musique.outputAudioMixerGroup.audioMixer.SetFloat("musiquePitch", 1.3f); //on accélère aussi la musique
-        musique.outputAudioMixerGroup.audioMixer.SetFloat("pitchShifter", 0.7f);
     }
 
     void UpdateVitesse()
@@ -70,9 +64,6 @@ public class PlayerMovement : MonoBehaviour
         if (tempsAcceleration >= dureeAcceleration) //si le temps qui s'est écoulé depuis le début de l'accélération est supérieur ou égal à la durée maximale que l'on a définie pour cette accélération
         {
             vitesse = vitesseInitiale; //on rend au joueur sa vitesse initiale
-            // Reprise du fond musical à vitesse normale
-            musique.outputAudioMixerGroup.audioMixer.SetFloat("musiquePitch", 1f);
-            musique.outputAudioMixerGroup.audioMixer.SetFloat("pitchShifter", 1f);
         }
     }
 }
