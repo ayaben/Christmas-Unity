@@ -29,6 +29,9 @@ public class TimerScript : MonoBehaviour
         TexteTimer.text = "Temps restant  :  " + ((int)(tempsRestant / 60)).ToString()
         + ":" + ((int)(tempsRestant - ((int)(tempsRestant / 60)) * 60)).ToString();
 
+        PlayerPrefs.SetString("TempsFinal", "Temps de jeu : " + ((int)(3-(tempsRestant / 60))).ToString() 
+            + ":" + (60-((int)(tempsRestant - ((int)(tempsRestant / 60)) * 60))).ToString());
+
 
         if (tempsRestant <= 0f)
         {
@@ -42,5 +45,7 @@ public class TimerScript : MonoBehaviour
         tempsFinal.Play();
     }
 
+
+    
 
 }

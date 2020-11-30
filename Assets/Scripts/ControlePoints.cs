@@ -14,7 +14,7 @@ public class ControlePoints : MonoBehaviour
 
 	private void Awake()
 	{
-		if (instance != null) //on s'assurea vec cette condition qu'il n'y bien qu'un seul script de contrôle de points dans la scène. C'est important car le compte des points est ce qui détermine la réussite ou l'échec du joueur dans le jeu.
+		if (instance != null) //on s'assure avec cette condition qu'il n'y bien qu'un seul script de contrôle de points dans la scène. C'est important car le compte des points est ce qui détermine la réussite ou l'échec du joueur dans le jeu.
 		{
 			Debug.LogWarning("il y a plus d'une instance de ControlePoints dans la scene");
 			return;
@@ -54,8 +54,10 @@ public class ControlePoints : MonoBehaviour
 
 	void Update() 
 	{
-		if( pointaAtteindre ==0){
-			SceneManager.LoadScene("Win"); //Si tous les objets ont été livrés, le compte arrive à zéro. Le joueur a alors gagné le jeu
+		if(pointaAtteindre ==0){
+			pointsText.text = "Points : " + comptedepoints.ToString();
+			PlayerPrefs.SetString("Score", "Points : " + comptedepoints.ToString());
+		    SceneManager.LoadScene("Win"); //Si tous les objets ont été livrés, le compte arrive à zéro. Le joueur a alors gagné le jeu
 		}
 	}
 }
