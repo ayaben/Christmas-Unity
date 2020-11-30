@@ -43,21 +43,20 @@ public class ControlePoints : MonoBehaviour
 	public void AjoutPointaAtteindre(int count) //Lors du début du jeu, chaque maison ajoute la somme des objets qu'il y a à livrer sur son emplacement à ce compte total de points.
 	{
 		pointaAtteindre += count;
-
 	}
 
 	public void ReduirePointAtteindre( int count) //À chaque fois que le joueur livre un objet, on enlève un point à ce compte total
 	{
 		pointaAtteindre -= count;
-
 	}
 
-	void Update() 
+	private void Update() 
 	{
-		if(pointaAtteindre ==0){
-			pointsText.text = "Points : " + comptedepoints.ToString();
-			PlayerPrefs.SetString("Score", "Points : " + comptedepoints.ToString());
-		    SceneManager.LoadScene("Win"); //Si tous les objets ont été livrés, le compte arrive à zéro. Le joueur a alors gagné le jeu
+		PlayerPrefs.SetString("ScoreFinal", "Points : " + comptedepoints.ToString()); // Conserve le nombre de points atteints pour les afficher sur la scène de "Win"
+		
+		if (pointaAtteindre==0)
+		{
+			SceneManager.LoadScene("Win"); //Si tous les objets ont été livrés, le compte arrive à zéro. Le joueur a alors gagné le jeu
 		}
 	}
 }

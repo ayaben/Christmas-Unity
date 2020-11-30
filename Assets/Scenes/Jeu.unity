@@ -2587,8 +2587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000064373016, y: -3.43}
-  m_SizeDelta: {x: 53.324554, y: 42.019558}
+  m_AnchoredPosition: {x: -0.0000064373016, y: -13}
+  m_SizeDelta: {x: 53.324554, y: 61.24316}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345734157
 MonoBehaviour:
@@ -25806,8 +25806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 286.58, y: 119.12}
-  m_SizeDelta: {x: 70.34491, y: 45.82743}
+  m_AnchoredPosition: {x: 287.87, y: 118.82}
+  m_SizeDelta: {x: 72.92273, y: 46.42708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040901639
 MonoBehaviour:
@@ -43663,7 +43663,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1693129505}
   - component: {fileID: 1693129504}
-  - component: {fileID: 1693129506}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -43697,21 +43696,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1693129506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693129503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a70c54a246a7e49afa4fb6a73114409d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comptedepoints: 0
-  pointsText: {fileID: 197919094}
-  pointaAtteindre: 0
 --- !u!1 &1712427330
 GameObject:
   m_ObjectHideFlags: 0
@@ -46350,6 +46334,7 @@ GameObject:
   - component: {fileID: 2110496274}
   - component: {fileID: 2110496279}
   - component: {fileID: 2110496278}
+  - component: {fileID: 2110496280}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -46723,6 +46708,21 @@ MonoBehaviour:
   startTimer: 180
   TexteTimer: {fileID: 1979666446}
   tempsFinal: {fileID: 2110496278}
+--- !u!114 &2110496280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110496269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70c54a246a7e49afa4fb6a73114409d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comptedepoints: 0
+  pointsText: {fileID: 197919094}
+  pointaAtteindre: 0
 --- !u!1 &2111702578
 GameObject:
   m_ObjectHideFlags: 0
