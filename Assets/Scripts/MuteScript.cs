@@ -26,6 +26,7 @@ public class MuteScript : MonoBehaviour
             BoutonMute.image.overrideSprite = SoundOFF;
             AudioListener.volume = 0f;
             Muted = false;
+
         }
         else
         {

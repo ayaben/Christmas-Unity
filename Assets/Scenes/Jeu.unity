@@ -2587,8 +2587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000064373016, y: -13}
-  m_SizeDelta: {x: 53.324554, y: 61.24316}
+  m_AnchoredPosition: {x: 10.09, y: -12.12}
+  m_SizeDelta: {x: 73.49978, y: 59.477787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345734157
 MonoBehaviour:
@@ -3760,8 +3760,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -26.8}
-  m_SizeDelta: {x: 56.511337, y: 90}
+  m_AnchoredPosition: {x: 10.58, y: -5.51}
+  m_SizeDelta: {x: 73.67311, y: 47.425568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &558484597
 MonoBehaviour:
@@ -26009,8 +26009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000020359, y: -27.1}
-  m_SizeDelta: {x: 57.457687, y: 90}
+  m_AnchoredPosition: {x: 12.6, y: -8.53}
+  m_SizeDelta: {x: 82.659775, y: 52.860077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054487758
 MonoBehaviour:
@@ -45751,8 +45751,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.8, y: -27.2}
-  m_SizeDelta: {x: 59.289215, y: 90}
+  m_AnchoredPosition: {x: 14.4, y: -7.57}
+  m_SizeDelta: {x: 83.70714, y: 49.401695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975868596
 MonoBehaviour:
@@ -46166,8 +46166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9, y: -27.1}
-  m_SizeDelta: {x: 58.694473, y: 90}
+  m_AnchoredPosition: {x: 11.74, y: -8.08}
+  m_SizeDelta: {x: 78.38216, y: 51.95941}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071354251
 MonoBehaviour:
@@ -46458,6 +46458,7 @@ MonoBehaviour:
   BoutonPause: {fileID: 1230144631}
   ImagePause: {fileID: 21300000, guid: f06723030ef874765a5e4ed1908b0a3e, type: 3}
   ImagePlay: {fileID: 21300000, guid: 6bb92db56863a49bf9fc5e992e334d82, type: 3}
+  scriptMute: {fileID: 2110496274}
 --- !u!82 &2110496276
 AudioSource:
   m_ObjectHideFlags: 0

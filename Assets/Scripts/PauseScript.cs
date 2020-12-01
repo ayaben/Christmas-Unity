@@ -13,6 +13,7 @@ public class PauseScript : MonoBehaviour
     public Button BoutonPause;
     public Sprite ImagePause;
     public Sprite ImagePlay;
+    public MuteScript scriptMute;
 
     void Start()
     {
@@ -26,16 +27,23 @@ public class PauseScript : MonoBehaviour
         {
             BoutonPause.image.overrideSprite = ImagePause;
             Time.timeScale = 1;
-            AudioListener.volume = 1f;
-            Muted = true;
+            if (scriptMute.Muted == true)
+            {
+             AudioListener.volume = 1f;
+             Muted = true;
+           }
             Paused = false;
         }
         else
         {
             BoutonPause.image.overrideSprite = ImagePlay;
             Time.timeScale = 0;
-            AudioListener.volume = 0f;
-            Muted = false;
+           
+                 AudioListener.volume = 0f;
+                Muted = false;
+            
+            
+           
             Paused = true;
         }
     }
