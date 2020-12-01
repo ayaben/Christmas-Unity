@@ -60,7 +60,7 @@ public class ListesMaisons : MonoBehaviour //Le script est public pour qu'on pui
         if (VoeuLivre==0 && VoeuJeu==0 && VoeuPeluche ==0) //Si tous les livres, jeux et peluche ont été livrés sur cette maison, on veut remplacer la liste  par un message qui indique au joueur qu'il n'a plus rien à livrer à cet emplacement.
         {
 
-            ListedeVoeux.text = "Mission accomplie ici !";
+            ListedeVoeux.text = "Mission\n accomplie\n ici !";
             MaisonLivreeSound.Play();
         }
     }
