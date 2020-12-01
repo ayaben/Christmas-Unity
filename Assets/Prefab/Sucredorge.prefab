@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a77c1f44fd7c4de1b2ad29f42389903, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a3ce1591ec933547b8a643657e3df64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -114,14 +114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f19a188f2fa435a9d6cfa690db469e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSources:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  surchargeHotteJeu: 1
-  surchargeHottePeluche: 1
-  surchargeHotteLivre: 1
+  Gift: {fileID: 0}
+  Slurp: {fileID: 0}
+  Trash: {fileID: 0}
+  Pop: {fileID: 0}
+  Surcharge: {fileID: 0}
   surchargeHotteTotale: 3
 --- !u!114 &-425633709411063692
 MonoBehaviour:
@@ -150,14 +147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f19a188f2fa435a9d6cfa690db469e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSources:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  surchargeHotteJeu: 1
-  surchargeHottePeluche: 1
-  surchargeHotteLivre: 1
+  Gift: {fileID: 0}
+  Slurp: {fileID: 0}
+  Trash: {fileID: 0}
+  Pop: {fileID: 0}
+  Surcharge: {fileID: 0}
   surchargeHotteTotale: 3
 --- !u!82 &2146713005418105810
 AudioSource:
